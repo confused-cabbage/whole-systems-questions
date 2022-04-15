@@ -1,6 +1,16 @@
 <?php
 
 include('db.php');
+
+$select_query =      "SELECT  *
+                    FROM    division;";
+
+$select_result = mysqli_query($connection, $select_query);
+
+
+while($row = mysqli_fetch_assoc($select_result)) {
+    print_r($row);
+};
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +26,7 @@ include('db.php');
         <h1>Whole Systems Design PDC Pre Course Packet Answers</h1>
     </header>
     <main>
-    
+
     </main> 
 </body>
 </html>
