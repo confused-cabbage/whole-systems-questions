@@ -2,14 +2,15 @@
 
 include('db.php');
 
-$select_query =      "SELECT  *
+$division_select_query =      "SELECT  *
                     FROM    division;";
 
-$select_result = mysqli_query($connection, $select_query);
+$division_select_result = mysqli_query($connection, $division_select_query);
 
 
-while($row = mysqli_fetch_assoc($select_result)) {
+while($row = mysqli_fetch_assoc($division_select_result)) {
     print_r($row);
+    // print_r($row['   division_text']);
 };
 ?>
 
@@ -26,7 +27,10 @@ while($row = mysqli_fetch_assoc($select_result)) {
         <h1>Whole Systems Design PDC Pre Course Packet Answers</h1>
     </header>
     <main>
-
+        <?php
+            while($division_row = mysqli_fetch_assoc($division_select_result)) {
+                echo "<div class="
+            }
     </main> 
 </body>
 </html>
