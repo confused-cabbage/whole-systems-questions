@@ -64,6 +64,15 @@ $division_select_result = mysqli_query($connection, $division_select_query);
                     }
 
                     printf("</div>");
+
+                    printf("
+                        <form id='question-%d' action='answer-submission.php' method='post'>
+                            <label for='answer'>Your answer:</label>
+                            <input type='text' id='answer' name='answer'>
+                            <input type='text' id='question-num' name='question-num' value='%d' hidden>
+                            <input type='submit'>
+                        </form>
+                    ", $question_row['id'], $question_row['id'], $question_row['id'], $question_row['id'], $question_row['id'], $question_row['id'],$question_row['id']);
                 
                 }
                 printf("</section>");
