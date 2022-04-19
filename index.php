@@ -60,7 +60,7 @@ $division_select_result = mysqli_query($connection, $division_select_query);
                                     </div>", $answer_row['author'], $answer_row['post_date'], $answer_row['body']);
                         }
                     } else {
-                        printf("<p style='color: red;'>no answers yet</p>");
+                        printf("<p>no answers yet</p>");
                     }
 
                     printf("</div>");
